@@ -14,7 +14,10 @@ Suppose your instance is running and has a public IP address, but `ssh` cannot c
 
 **Your answer:** Which path did you take in the console (service → page → tab)?
 
-...
+EC2 - Network & Security - Security Groups - launch-wizard-1 - Inbound rules tab
+<img width="1366" height="784" alt="Screenshot 2026-11-04 at 11 44 03 PM" src="https://github.com/user-attachments/assets/5f38ddf9-57da-4c26-ac16-c06d99912a18" />
+
+
 
 ## 2. Lambda: why didn't my function run?
 
@@ -26,7 +29,9 @@ Suppose you uploaded a new book to your bucket, but several minutes later MongoD
 
 **Your answer:** Which path did you take in the console (service → page → tab)?
 
-...
+Lambda - Functions - book-analyzer-dev-analyze_new_book - Configuration tab - Triggers
+<img width="1429" height="758" alt="Screenshot 2026-11-04 at 11 45 30 PM" src="https://github.com/user-attachments/assets/0a5c7b8f-c058-4d4a-8df2-5fc201eb94a9" />
+
 
 ## 3. Lambda: where do I find the error?
 
@@ -38,7 +43,9 @@ Suppose the function did start, but MongoDB still has no document for the book. 
 
 **Your answer:** Which path did you take in the console (service → page → tab)?
 
-...
+Lambda - Functions - book-analyzer-dev-analyze_new_book - Monitor tab - View CloudWatch logs - open a log stream
+<img width="1447" height="757" alt="Screenshot 2026-11-04 at 11 46 22 PM" src="https://github.com/user-attachments/assets/12655d60-6832-43fc-b451-95909b7391eb" />
+
 
 ## 4. EC2 or Lambda: a backlog or new uploads?
 
@@ -54,4 +61,6 @@ For comparison, typical times in this lab:
 
 **Your answer:**
 
-...
+Case A: I would use EC2 because I am only analyzing them once all at once. Running 5000 separate Lambda functions would be confusing and time consuming and potentially costly.
+
+Case b: This is the perfect opportunity for a lambda function. This way, the AWS lambda function would be able to trigger in response to the uploads throughout the day and keep things updated.
